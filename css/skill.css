@@ -1,0 +1,15 @@
+.skill{
+    display: none;
+}
+.skills{
+    border: 0.1rem solid #6c757d;
+    margin: 2rem;
+    width: 50%;
+    height: 1.9rem;
+    padding-left: 0.4rem;
+}
+.adskl{
+    margin: 2rem;
+    color: blue;
+    cursor: pointer;
+}

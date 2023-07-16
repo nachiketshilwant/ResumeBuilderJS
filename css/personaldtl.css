@@ -1,0 +1,219 @@
+.ttl{
+    text-align: center;
+}
+.prsldtl{
+    display: flex;
+    flex-direction: column;
+}
+.dv{
+    display: flex;
+    margin: 1rem;
+}
+#main{
+    margin-left: 5%;
+    width: 90%;
+}
+.pic{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.picimg{
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 0.5%;
+}
+.pictk{
+    margin-left: 1%;
+    width: 8rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    color: #219ebc;
+    border: 0.1rem solid #023e8a;
+}
+.pictxt{
+    display: flex;
+    align-items: center;
+}
+.jbttl{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#jb_tle{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem; 
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.fnm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#fname{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.lnm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#lname{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.phn{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#phone{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.emal{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#emil{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.adr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#addr{
+    border: 0.1rem solid #6c757d;
+    width: 96%;
+    padding-left: 0.4rem;
+}
+.cty{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#city{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.pc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#pcd{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.ste{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#state{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.cntry{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#country{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.smr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn1{
+    background: #fff;
+    width: 2rem;
+    border: 0;
+}
+.active1{
+    background: #fff;
+    width: 2rem;
+    border: 0;
+}
+.nactive1{
+    background: #fff;
+    width: 2rem;
+    border: 0;
+}
+#summary{
+    height: 13rem;
+    width: 96%;
+    border: 0.1rem solid #6c757d;
+    overflow-y: auto;
+}
+.sc_lk{
+    margin-left: 1rem;
+    color: #023e8a;
+    cursor: pointer;
+}
+.sw{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inp_sw{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.sl{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inp_sl{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.addsc{
+    display: none;
+    color: blue;
+    cursor: pointer;
+    margin:0 0 4% 75%;
+}

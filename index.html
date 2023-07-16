@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/personaldtl.css">
+    <link rel="stylesheet" href="./css/profexp.css">
+    <link rel="stylesheet" href="./css/edu.css">
+    <link rel="stylesheet" href="./css/skill.css">
+    <link rel="stylesheet" href="./css/projct.css">
+    <link rel="stylesheet" href="./css/achv.css">
+    <link rel="stylesheet" href="./css/resume.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <h2 class="ttl">Resume Generator</h2>
+
+    <div id="tm">
+
+        <div class="card" id="main">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <button class="nav-link prsl active">Personal Details</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link prex">Professional Experience</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link edu">Education</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link skil">Key Skills</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link prj">Projects</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link achieve">Achievement</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" onclick=rsmpdf()>Get Resume</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="prsldtl">
+                    <div class="dv">
+                        <div class="pic">
+                            <label for="photo">Profile Picture</label>
+                            <div class="pictxt">
+                                <img src="./image/pictemp.png" alt="pic" class="picimg">
+                                <button class="pictk" onclick="document.getElementById('photo').click()">Add
+                                    Photo</button>
+                                <input type="file" name="photo" id="photo" accept="image/*" style="display: none;"
+                                    onchange=img()>
+                            </div>
+                        </div>
+                        <div class="jbttl">
+                            <label for="jb_tle">Job Tittle</label>
+                            <input type="text" name="jb_tle" id="jb_tle" required>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="fnm">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname" required>
+                        </div>
+                        <div class="lnm">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname" required>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="phn">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" required>
+                        </div>
+                        <div class="emal">
+                            <label for="emil">Email</label>
+                            <input type="email" name="emil" id="emil" required>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="adr">
+                            <label for="addr">Address</label>
+                            <textarea name="addr" id="addr" oninput="auto_grow(this)" required></textarea>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="cty">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" required>
+                        </div>
+                        <div class="pc">
+                            <label for="pcd">Post Code</label>
+                            <input type="email" name="pcd" id="pcd" required>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="ste">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state" required>
+                        </div>
+                        <div class="cntry">
+                            <label for="country">Country</label>
+                            <input type="email" name="country" id="country" required>
+                        </div>
+                    </div>
+                    <div class="dv">
+                        <div class="smr">
+                            <label for="summary">Summary</label>
+                            <div class="clkd">
+                                <button id="bold" class="btn1 sm">
+                                    <i class="fa-solid fa-bold"></i>
+                                </button>
+                                <button id="italic" class="btn1 sm">
+                                    <i class="fa-solid fa-italic"></i>
+                                </button>
+                                <button id="underline" class="btn1 sm">
+                                    <i class="fa-solid fa-underline"></i>
+                                </button>
+                                <button id="strikethrough" class="btn1 sm">
+                                    <i class="fa-solid fa-strikethrough"></i>
+                                </button>
+                                <button id="superscript" class="btn1 sm">
+                                    <i class="fa-solid fa-superscript"></i>
+                                </button>
+                                <button id="subscript" class="btn1 sm">
+                                    <i class="fa-solid fa-subscript"></i>
+                                </button>
+                                <button id="insertOrderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                </button>
+                                <button id="insertUnorderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </button>
+                                <button id="undo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button id="redo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                                <button id="createlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link"></i>
+                                </button>
+                                <button id="unlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link-slash"></i>
+                                </button>
+                                <button id="justifyLeft" class="btn1 sm">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button id="justifyCenter" class="btn1 sm">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button id="justifyRight" class="btn1 sm">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+                                <button id="JustifyFull" class="btn1 sm">
+                                    <i class="fa-solid fa-align-justify"></i>
+                                </button>
+                                <button id="indent" class="btn1 sm">
+                                    <i class="fa-solid fa-indent"></i>
+                                </button>
+                                <button id="outdent" class="btn1 sm">
+                                    <i class="fa-solid fa-outdent"></i>
+                                </button>
+                            </div>
+                            <div id="summary" contenteditable="true"></div>
+                        </div>
+                    </div>
+                    <p class="sc_lk">+ Add Social Links</p>
+                    <div class="scllink">
+                        <div class="dv slk"></div>
+                    </div>
+                    <div class="addsc">+ Add one more</div>
+                    <button class="next" id="prtnxt"><i class="fa-solid fa-right-long"></i></button>
+                </div>
+                <div class="prfexp">
+                    <h4 class="m-3 trial">Tell us about your most recent job</h4>
+                    <div class="exp">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <p>Use Following button to modify text style in summary section</p>
+                            <div class="clkd">
+                                <button id="bold" class="btn1 sm">
+                                    <i class="fa-solid fa-bold"></i>
+                                </button>
+                                <button id="italic" class="btn1 sm">
+                                    <i class="fa-solid fa-italic"></i>
+                                </button>
+                                <button id="underline" class="btn1 sm">
+                                    <i class="fa-solid fa-underline"></i>
+                                </button>
+                                <button id="strikethrough" class="btn1 sm">
+                                    <i class="fa-solid fa-strikethrough"></i>
+                                </button>
+                                <button id="superscript" class="btn1 sm">
+                                    <i class="fa-solid fa-superscript"></i>
+                                </button>
+                                <button id="subscript" class="btn1 sm">
+                                    <i class="fa-solid fa-subscript"></i>
+                                </button>
+                                <button id="insertOrderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                </button>
+                                <button id="insertUnorderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </button>
+                                <button id="undo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button id="redo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                                <button id="createlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link"></i>
+                                </button>
+                                <button id="unlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link-slash"></i>
+                                </button>
+                                <button id="justifyLeft" class="btn1 sm">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button id="justifyCenter" class="btn1 sm">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button id="justifyRight" class="btn1 sm">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+                                <button id="JustifyFull" class="btn1 sm">
+                                    <i class="fa-solid fa-align-justify"></i>
+                                </button>
+                                <button id="indent" class="btn1 sm">
+                                    <i class="fa-solid fa-indent"></i>
+                                </button>
+                                <button id="outdent" class="btn1 sm">
+                                    <i class="fa-solid fa-outdent"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="0">
+                            <div class="dv">
+                                <div class="posttl">
+                                    <label for="psttl">Position Title</label>
+                                    <input type="text" name="psttl" class="psttl">
+                                </div>
+                                <div class="cmpnm">
+                                    <label for="cmpname">Company Name</label>
+                                    <input type="text" name="cmpname" class="cmpname">
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="srdt">
+                                    <label for="strdt">Start Date</label>
+                                    <input type="month" name="strdt" class="strdt">
+                                </div>
+                                <div class="edt">
+                                    <label for="endt">End Date</label>
+                                    <input type="month" name="endt" class="endt" disabled>
+                                    <div class="crron">
+                                        <input type="checkbox" name="crremp" class="crremp" checked>
+                                        <label for="crremp">Current Employed</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="smr">
+                                    <label for="summary">Work Summary</label>
+                                    <div class="wrksummary" contenteditable="true"></div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="adexp">+ Add more work experience</div>
+                    <button class="next" id="expnxt"><i class="fa-solid fa-right-long"></i></button>
+                </div>
+                <div class="ed">
+                    <h4 class="m-3">Add your most relevant education, including programs you're currently enrolled in.
+                    </h4>
+                    <div class="edd">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <p>Use Following button to modify text style in description section</p>
+                            <div class="clkd">
+                                <button id="bold" class="btn1 sm">
+                                    <i class="fa-solid fa-bold"></i>
+                                </button>
+                                <button id="italic" class="btn1 sm">
+                                    <i class="fa-solid fa-italic"></i>
+                                </button>
+                                <button id="underline" class="btn1 sm">
+                                    <i class="fa-solid fa-underline"></i>
+                                </button>
+                                <button id="strikethrough" class="btn1 sm">
+                                    <i class="fa-solid fa-strikethrough"></i>
+                                </button>
+                                <button id="superscript" class="btn1 sm">
+                                    <i class="fa-solid fa-superscript"></i>
+                                </button>
+                                <button id="subscript" class="btn1 sm">
+                                    <i class="fa-solid fa-subscript"></i>
+                                </button>
+                                <button id="insertOrderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                </button>
+                                <button id="insertUnorderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </button>
+                                <button id="undo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button id="redo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                                <button id="createlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link"></i>
+                                </button>
+                                <button id="unlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link-slash"></i>
+                                </button>
+                                <button id="justifyLeft" class="btn1 sm">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button id="justifyCenter" class="btn1 sm">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button id="justifyRight" class="btn1 sm">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+                                <button id="JustifyFull" class="btn1 sm">
+                                    <i class="fa-solid fa-align-justify"></i>
+                                </button>
+                                <button id="indent" class="btn1 sm">
+                                    <i class="fa-solid fa-indent"></i>
+                                </button>
+                                <button id="outdent" class="btn1 sm">
+                                    <i class="fa-solid fa-outdent"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="0">
+                            <div class="dv">
+                                <div class="schnm">
+                                    <label for="schname">School Name</label>
+                                    <input type="text" name="schname" class="schname">
+                                </div>
+                                <div class="schlc">
+                                    <label for="schloc">School Location</label>
+                                    <input type="text" name="schloc" class="schloc">
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="ssrdt">
+                                    <label for="scstrdt">Start Date</label>
+                                    <input type="month" name="scstrdt" class="scstrdt">
+                                </div>
+                                <div class="sedt">
+                                    <label for="scendt">End Date</label>
+                                    <input type="month" name="scendt" class="scendt" disabled>
+                                    <div class="crron">
+                                        <input type="checkbox" name="sccrremp" class="sccrremp" checked>
+                                        <label for="sccrremp">I currently study here</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="dgr">
+                                    <label for="degree">Degree</label>
+                                    <input type="text" name="degree" class="degree">
+                                </div>
+                                <div class="fos">
+                                    <label for="fost">Field of Study</label>
+                                    <input type="text" name="fost" class="fost">
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="dscr">
+                                    <label for="description">Description</label>
+                                    <div class="description" contenteditable="true"></div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="adedu">+ Add more Education</div>
+                    <button class="next" id="edunxt"><i class="fa-solid fa-right-long"></i></button>
+                </div>
+                <div class="skill">
+                    <h4 class="m-3">Add relevant professional key skills and proficiencies.</h4>
+                    <div class="dvskl">
+                        <div class="skills" contenteditable="true"></div>
+                    </div>
+                    <div class="adskl">+ Add more Skills</div>
+                    <button class="next" id="sklnxt"><i class="fa-solid fa-right-long"></i></button>
+                </div>
+                <div class="proj">
+                    <h4 class="m-3">Add your most Exciting, Interesting and Awesome Projects</h4>
+                    <div class="prjc">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <p>Use Following button to modify text style in project description section</p>
+                            <div class="clkd">
+                                <button id="bold" class="btn1 sm">
+                                    <i class="fa-solid fa-bold"></i>
+                                </button>
+                                <button id="italic" class="btn1 sm">
+                                    <i class="fa-solid fa-italic"></i>
+                                </button>
+                                <button id="underline" class="btn1 sm">
+                                    <i class="fa-solid fa-underline"></i>
+                                </button>
+                                <button id="strikethrough" class="btn1 sm">
+                                    <i class="fa-solid fa-strikethrough"></i>
+                                </button>
+                                <button id="superscript" class="btn1 sm">
+                                    <i class="fa-solid fa-superscript"></i>
+                                </button>
+                                <button id="subscript" class="btn1 sm">
+                                    <i class="fa-solid fa-subscript"></i>
+                                </button>
+                                <button id="insertOrderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                </button>
+                                <button id="insertUnorderedList" class="btn1 sm">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </button>
+                                <button id="undo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button id="redo" class="btn1 sm">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                                <button id="createlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link"></i>
+                                </button>
+                                <button id="unlink" class="btn1 sm">
+                                    <i class="fa-solid fa-link-slash"></i>
+                                </button>
+                                <button id="justifyLeft" class="btn1 sm">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button id="justifyCenter" class="btn1 sm">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button id="justifyRight" class="btn1 sm">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+                                <button id="JustifyFull" class="btn1 sm">
+                                    <i class="fa-solid fa-align-justify"></i>
+                                </button>
+                                <button id="indent" class="btn1 sm">
+                                    <i class="fa-solid fa-indent"></i>
+                                </button>
+                                <button id="outdent" class="btn1 sm">
+                                    <i class="fa-solid fa-outdent"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="0">
+                            <div class="dv">
+                                <div class="pjnm">
+                                    <label for="pjname">Project Name</label>
+                                    <input type="text" name="pjname" class="pjname">
+                                </div>
+                                <div class="pjlc">
+                                    <label for="pjloc">Project Link</label>
+                                    <input type="text" name="pjloc" class="pjloc">
+                                </div>
+                            </div>
+                            <div class="dv">
+                                <div class="pjdsc">
+                                    <label for="pjdescription">Project Description</label>
+                                    <div class="pjdescription" contenteditable="true"></div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="adprj">+ Add more Projects</div>
+                    <button class="next" id="prjnxt"><i class="fa-solid fa-right-long"></i></button>
+                </div>
+                <div class="achv">
+                    <h4 class="m-3">Add your Achievement, Certification, extra-curricular activity</h4>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <p>Use Following button to modify Achievement Section</p>
+                        <div class="clkd">
+                            <button id="bold" class="btn1 sm">
+                                <i class="fa-solid fa-bold"></i>
+                            </button>
+                            <button id="italic" class="btn1 sm">
+                                <i class="fa-solid fa-italic"></i>
+                            </button>
+                            <button id="underline" class="btn1 sm">
+                                <i class="fa-solid fa-underline"></i>
+                            </button>
+                            <button id="undo" class="btn1 sm">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+                            <button id="redo" class="btn1 sm">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+                            <button id="createlink" class="btn1 sm">
+                                <i class="fa-solid fa-link"></i>
+                            </button>
+                            <button id="unlink" class="btn1 sm">
+                                <i class="fa-solid fa-link-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="acchv">
+                        <div class="achievement" contenteditable="true">
+                            <b>Achieved</b> 3 * at codechef
+                        </div>
+                    </div>
+                    <div class="addachv">+ Add more Achievement</div>
+                    <button id="sub" onclick=rsmpdf()>Generate My Resume</button>
+                </div>
+            </div>
+        </div>
+        <div id="resume">
+            <div id="resumemn">
+                <div id="rsmhead">
+                    <div id="lfthd">
+                        <img src="./image/pictemp.png" alt="photo" id="rsmphoto">
+                        <div class="d-flex flex-column">
+                            <h5 id="rsmfname"></h5>
+                            <h5 id="rsmlname"></h5>
+                            <h6 id="rsmperttl">
+                                </h4>
+                        </div>
+                    </div>
+                    <div id="rhthd">
+                        <h6 id="rsmaddr"></h6>
+                        <h6 id="rsmohadr"></h6>
+                        <span>
+                            <a href="#" id="rsmmail">
+                                <h6 id="rsmail"></h6>
+                            </a>
+                            <a href="#" id="rsmphn">
+                                <h6 id="rsphn"></h6>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div id="rsmsclks" style="display: flex;"></div>
+                <p id="rsmsmry"></p>
+                <h4>Professional Experience</h4>
+                <hr class="hr">
+                <div class="rsmexp"></div>
+                <h4>Education</h4>
+                <hr class="hr">
+                <div class="rsmedu"></div>
+                <h4>Key Skills</h4>
+                <hr class="hr">
+                <div class="rsmskll"></div>
+                <h4 style="margin-top: 1rem;">Projects</h4>
+                <hr class="hr">
+                <div class="rsmprj"></div>
+                <h4 style="margin-top: 1rem;">Achievements</h4>
+                <hr class="hr">
+                <div class="rsmschv"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- //scripts -->
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- main js script of card -->
+    <script src="./js/main.js"></script>
+    <script src="./js/txteditor.js"></script>
+    <script src="./js/personaldtl.js"></script>
+    <script src="./js/profexp.js"></script>
+    <script src="./js/edu.js"></script>
+    <script src="./js/skill.js"></script>
+    <script src="./js/projct.js"></script>
+    <script src="./js/achv.js"></script>
+    <script src="./js/nav.js"></script>
+
+    <!-- //script for resume download as pdf -->
+    <script src="./js/resume.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+
+</html>

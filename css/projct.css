@@ -1,0 +1,65 @@
+.proj{
+    display: none;
+}
+.pjnm{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pjname{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.pjlc{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pjloc{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.pjdescription{
+    height: 13rem;
+    width: 31rem;
+    border: 0.1rem solid #6c757d;
+    overflow-y: auto;
+}
+@media screen and (max-width: 1230px) {
+    .pjdescription {
+        width: 25rem;
+    }
+    @media screen and (max-width: 1025px) {
+        .pjdescription {
+            width: 20rem;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .pjdescription {
+            width: 35rem;
+        }
+      }
+      @media screen and (max-width: 620px) {
+        .pjdescription {
+            width: 28rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .pjdescription {
+            width: 20rem;
+        }
+      }
+  }
+.adprj{
+    color: blue;
+    margin-left: 1%;    
+    cursor: pointer;
+}

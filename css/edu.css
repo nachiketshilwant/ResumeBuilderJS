@@ -1,0 +1,120 @@
+.ed{
+    display: none;
+}
+.schnm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.schname{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.schlc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.schloc{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.ssrdt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.scstrdt{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.sedt{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.scendt{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.dgr{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.degree{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.fos{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fost{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.description{
+    height: 13rem;
+    width: 31rem;
+    border: 0.1rem solid #6c757d;
+    overflow-y: auto;
+}
+
+    @media screen and (max-width: 1230px) {
+      .description {
+          width: 25rem;
+      }
+    }
+    @media screen and (max-width: 1025px) {
+        .description {
+            width: 20rem;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .description {
+            width: 35rem;
+        }
+      }
+      @media screen and (max-width: 620px) {
+        .description {
+            width: 28rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .description {
+            width: 20rem;
+        }
+      }
+
+.crron{
+    margin: 0.1rem;
+    font-size:  small;
+}
+.adedu{
+    color: blue;
+    margin-left: 1%;    
+    cursor: pointer;
+}

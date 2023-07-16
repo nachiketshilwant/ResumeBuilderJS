@@ -1,0 +1,70 @@
+.prfexp{
+    display: none;
+}
+.posttl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.psttl{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.cmpnm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cmpname{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.srdt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.strdt{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.edt{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.endt{
+    border: 0.1rem solid #6c757d;
+    border-radius: 1rem;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.wrksummary{
+    height: 13rem;
+    width: 96%;
+    border: 0.1rem solid #6c757d;
+    overflow-y: auto;
+}
+.crron{
+    margin: 0.1rem;
+    font-size:  small;
+}
+.adexp{
+    color: blue;
+    margin-left: 1%;    
+    cursor: pointer;
+}
+#expnxt{
+    margin-left: 85%;
+}

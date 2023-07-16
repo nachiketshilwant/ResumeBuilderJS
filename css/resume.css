@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hr{
+    margin-top: -0.5rem;
+}
+#resume{
+    margin: 1rem;
+}
+/* //Personal Info */
+#rsmhead{
+    display: flex;
+    align-items:start;
+}
+#rsmphoto{
+    height: 4.5rem;
+    margin: 0.5rem 1rem 0rem 0rem;
+}
+#lfthd{
+    display: flex;
+    width: 12rem;
+}
+#rhthd{
+    margin-left: 10rem;
+}
+.rsmsklmy{
+    margin-right: 6%;
+}
+/* //experience */
+.rsmposttl{
+    display: flex;
+}
+.rsmpsmry{
+    margin-top: -1rem;
+}
+.o1{
+    margin-bottom: 1rem;
+}
+/* //Education */
+.rsmedttl{
+    display: flex;
+}
+.rsmedsmry{
+    margin-top: -1rem;
+}
+/* //Skills */
+.rsmskll{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rsmsk{
+    margin: 0 0.5rem;
+}
+/* //Project */
+.rsmprjlk{
+    margin-top: -0.7rem;
+}
+.rspjdsc{
+    margin-top: -1.3rem;
+}
